@@ -1,0 +1,27 @@
+﻿@model IEnumerable<juniorpathtaslak5.Models.Student>
+
+@{
+    ViewData["Title"] = "Test Page";
+}
+
+<h1>Test Page</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.DateOfBirth.ToShortDateString()</td>
+                <td>@student.Age</td>
+            </tr>
+        }
+    </tbody>
+</table>
